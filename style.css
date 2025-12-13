@@ -1,32 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Main Directive: [Page Title]</title>
-    
-    <link rel="stylesheet" href="style.css"> 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>👑 The Main Directive</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="partners.html">Partners</a></li>
-                    <li><a href="creators.html">Creators</a></li>
-                </ul>
-            </nav>
-        </header>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
 
-        <main>
-            </main>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        <footer>
-            <p>The Main Directive - Execute the Narrative. All rights reserved &copy; 2026</p>
-        </footer>
-    </div>
-</body>
-</html>
+header {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+main {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ffd700;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+ul li strong {
+    color: #ffd700;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-twitch {
+    background: #9146ff;
+    color: #fff;
+}
+
+.btn-twitch:hover {
+    background: #772ce8;
+}
+
+.btn-youtube {
+    background: #ff0000;
+    color: #fff;
+}
+
+.btn-youtube:hover {
+    background: #cc0000;
+}
+
+.btn-discord {
+    background: #5865f2;
+    color: #fff;
+}
+
+.btn-discord:hover {
+    background: #4752c4;
+}
+
+.btn-twitter {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.btn-twitter:hover {
+    background: #0d8bd9;
+}
+
+/* Status Message */
+.status-message {
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 4px solid #ffd700;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Partner/Creator Cards */
+.partner-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 8px;
+    border-left: 4px solid #ffd700;
+}
+
+.partner-card h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.partner-card p {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
