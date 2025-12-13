@@ -4,10 +4,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Define Core Brand Colors */
+    --color-primary: #a67c00; /* Authority Bronze/Gold */
+    --color-secondary: #fff; /* White Text */
+    --color-background-light: #2c2c2c; /* Dark Grey/Black Background for content blocks */
+    --color-background-dark: #121212; /* Very Dark Background for body */
+    --color-shadow: rgba(0, 0, 0, 0.6);
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
+    /* Use a simple, very dark background */
+    background: var(--color-background-dark); 
+    color: var(--color-secondary);
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -18,111 +28,85 @@ body {
     padding: 20px;
 }
 
-header {
-    background: rgba(0, 0, 0, 0.3);
+/* Base style for header, main, and footer */
+header, main, footer {
+    background: var(--color-background-light); /* Dark content blocks */
     padding: 30px;
     border-radius: 10px;
     margin-bottom: 30px;
-    backdrop-filter: blur(10px);
+    /* Adds a subtle 3D effect and separation */
+    box-shadow: 0 4px 15px var(--color-shadow);
 }
 
+/* Header Styling */
 header h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-primary); /* Use bronze for the name */
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 nav a {
-    color: #fff;
+    color: var(--color-secondary);
     text-decoration: none;
     font-size: 1.1em;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border: 2px solid var(--color-primary); /* Outline effect */
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--color-primary);
     transform: translateY(-2px);
+    color: #121212; /* Dark text on hover for contrast */
 }
 
-main {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 40px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    backdrop-filter: blur(10px);
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-section:last-child {
-    margin-bottom: 0;
-}
-
+/* Headings & Text */
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #ffd700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-primary); /* Bronze for major headings */
+    border-bottom: 2px solid rgba(166, 124, 0, 0.5); /* Subtle underline */
+    padding-bottom: 5px;
 }
 
 h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: #ffd700;
+    color: var(--color-primary);
 }
 
-p {
+p, ul li {
     font-size: 1.1em;
     margin-bottom: 15px;
 }
 
 ul {
-    list-style: none;
-    padding-left: 20px;
+    list-style: none; /* Removed default bullet for cleaner look */
+    padding-left: 0;
 }
 
 ul li {
-    margin-bottom: 15px;
-    font-size: 1.1em;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--color-primary); /* Bronze line for list items */
+    padding-left: 10px;
 }
 
 ul li strong {
-    color: #ffd700;
+    color: var(--color-secondary);
 }
 
 /* Button Styles */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    margin: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
 .social-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -130,101 +114,57 @@ ul li strong {
     margin-top: 20px;
 }
 
-.btn-twitch {
-    background: #9146ff;
-    color: #fff;
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 2px 5px var(--color-shadow);
 }
 
-.btn-twitch:hover {
-    background: #772ce8;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px var(--color-shadow);
 }
 
-.btn-youtube {
-    background: #ff0000;
-    color: #fff;
-}
+/* Specific Social Button Colors (Keep these as they are good!) */
+.btn-twitch { background: #9146ff; color: #fff; }
+.btn-twitch:hover { background: #772ce8; }
+.btn-youtube { background: #ff0000; color: #fff; }
+.btn-youtube:hover { background: #cc0000; }
+.btn-discord { background: #5865f2; color: #fff; }
+.btn-discord:hover { background: #4752c4; }
+.btn-twitter { background: #1da1f2; color: #fff; }
+.btn-twitter:hover { background: #0d8bd9; }
 
-.btn-youtube:hover {
-    background: #cc0000;
-}
-
-.btn-discord {
-    background: #5865f2;
-    color: #fff;
-}
-
-.btn-discord:hover {
-    background: #4752c4;
-}
-
-.btn-twitter {
-    background: #1da1f2;
-    color: #fff;
-}
-
-.btn-twitter:hover {
-    background: #0d8bd9;
-}
-
-/* Status Message */
-.status-message {
-    background: rgba(255, 215, 0, 0.1);
-    border-left: 4px solid #ffd700;
+/* Status Message and Cards */
+.status-message, .partner-card {
+    background: rgba(166, 124, 0, 0.1); /* Very subtle bronze background */
+    border-left: 4px solid var(--color-primary);
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
-}
-
-/* Partner/Creator Cards */
-.partner-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 8px;
-    border-left: 4px solid #ffd700;
-}
-
-.partner-card h3 {
-    color: #ffd700;
-    margin-bottom: 15px;
-}
-
-.partner-card p {
-    margin-bottom: 10px;
+    box-shadow: 0 2px 5px var(--color-shadow);
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--color-background-light);
     border-radius: 10px;
-    backdrop-filter: blur(10px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .social-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
+    header h1 { font-size: 1.8em; }
+    nav ul { flex-direction: column; gap: 10px; }
+    main { padding: 20px; }
+    h2 { font-size: 1.5em; }
+    .social-buttons { flex-direction: column; }
+    .btn { width: 100%; }
 }
