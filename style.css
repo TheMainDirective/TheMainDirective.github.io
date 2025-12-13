@@ -3,21 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Main Directive: Execute the Narrative</title>
+    <title>The Main Directive: [Page Title]</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css"> 
 
-    <style>
-        /* This is where you can add your custom colors if you want */
-        :root {
-            --pico-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            --pico-primary: #a67c00; /* Dark Gold/Bronze for Authority */
-            --pico-primary-inverse: #0f1011; /* Dark Background */
-        }
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        header { padding: 40px 0; }
-    </style>
-</head>
+    </head>
 <body>
     <div class="container">
         <header>
@@ -35,7 +25,7 @@
             </main>
 
         <footer>
-            <small>The Main Directive - Execute the Narrative. All rights reserved &copy; 2026</small>
+            <p>The Main Directive - Execute the Narrative. All rights reserved &copy; 2026</p>
         </footer>
     </div>
 </body>
